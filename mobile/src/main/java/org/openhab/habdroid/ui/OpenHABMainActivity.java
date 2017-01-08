@@ -604,6 +604,9 @@ public class OpenHABMainActivity extends AppCompatActivity implements OnWidgetSe
      */
 
     private void selectSitemap(final String baseUrl, final boolean forceSelect) {
+
+        //TODO: instead of loading the default sitemap, we need to load in the list of rooms and go to our own activity.
+
         Log.d(TAG, "Loading sitemap list from " + baseUrl + "rest/sitemaps");
         setProgressIndicatorVisible(true);
         mAsyncHttpClient.get(baseUrl + "rest/sitemaps", new DefaultHttpResponseHandler() {
